@@ -118,6 +118,25 @@ void printPairs(const int* arr, size_t size) {
 }
 ```
 
+* O(1.618^n) - експоненциална сложност с основа phi
+```c++
+int fibonacci(int n) 
+{ 
+	if (n <= 0) 
+    { 
+		return 0; 
+	} 
+    else if (n == 1) 
+    { 
+		return 1; 
+	} 
+    else 
+    { 
+	    return fibonacci(n - 1) + fibonacci(n - 2); 
+	} 
+}
+```
+
 * О(2^n) - експоненциална сложност с основа 2
 ```c++
 void towersOfHanoi(int n, char src, char aux, char dest) 
@@ -138,7 +157,7 @@ void towersOfHanoi(int n, char src, char aux, char dest)
 ```c++
 void example(const int* arr, size_t n) 
 { 
-	int s = 0;
+    int s = 0;
     for (int i = 1; i <= n; i++)
     {
         for (int j = n + i - 5; j <= n; j++)
@@ -148,4 +167,27 @@ void example(const int* arr, size_t n)
         s++;
     }
 }
+```
+
+### Сложност по памет
+Сложността по памет на даден алгоритъм е количеството памет, който той използва в процеса си на изпълнение, като съответно не броим тази, заделена за входа му. Най-просто казано - **работната памет** на алгоритъма.
+
+Аналогично на сложността по време може да се разглежда сложност по памет в най-добрия, в средния и в най-лошия случай.
+
+Алгоритъм, който използва константно количество памет (с други думи O(1) сложност по памет) се нарича **in-place**.
+
+---
+[ **EXTRA** ] Една разлика между сложността по време и по памет е, че сложността по време е винаги монотонно растяща функция, докато тази по памет може и да не изпълнява това условие.
+
+## Допълнителни материали
+За задачите в HackerRank ще е добре да разгледате документациите на следните структури, разглеждани в курса по ООП:
+
+* [**std::string**](https://en.cppreference.com/w/cpp/string/basic_string) - динамичен масив с char елементи (низ)
+* [**std::pair**](https://en.cppreference.com/w/cpp/utility/pair) - наредена двойка от типове Т1 и Т2
+* [**std::vector**](https://en.cppreference.com/w/cpp/container/vector) - динамичен масив с елементи от тип Т
+
+Две полезни команди, които ще "забързат" кода ви в HackerRank също така са:
+```c++
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
 ```
