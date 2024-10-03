@@ -124,18 +124,18 @@ void printPairs(const int* arr, size_t size) {
 ```c++
 int fibonacci(int n) 
 { 
-	if (n <= 0) 
+    if (n <= 0) 
     { 
-		return 0; 
-	} 
+        return 0; 
+    } 
     else if (n == 1) 
     { 
-		return 1; 
-	} 
+        return 1; 
+    } 
     else 
     { 
-	    return fibonacci(n - 1) + fibonacci(n - 2); 
-	} 
+        return fibonacci(n - 1) + fibonacci(n - 2); 
+    } 
 }
 ```
 
@@ -143,15 +143,15 @@ int fibonacci(int n)
 ```c++
 void towersOfHanoi(int n, char src, char aux, char dest) 
 { 
-	if (n == 1) 
+    if (n == 1) 
     { 
-		cout << "Move disk 1 from " << src << " to " << dest << endl; 
-		return; 
-	} 
+        cout << "Move disk 1 from " << src << " to " << dest << endl; 
+        return; 
+    } 
 
-	towersOfHanoi(n - 1, src, dest, aux);
-	cout << "Move disk " << n << " from " << src << " to " << dest << endl; 
-	towersOfHanoi(n - 1, aux, src, dest); 
+    towersOfHanoi(n - 1, src, dest, aux);
+    cout << "Move disk " << n << " from " << src << " to " << dest << endl; 
+    towersOfHanoi(n - 1, aux, src, dest); 
 }
 ```
 
