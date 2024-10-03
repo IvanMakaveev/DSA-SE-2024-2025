@@ -193,3 +193,7 @@ void example(const int* arr, size_t n)
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
 ```
+
+## Задачи:
+
+[Link към задачи за семинара](https://www.hackerrank.com/contests/seminar-01)
