@@ -2,7 +2,9 @@
 ## Що е то *алгоритъм*?
 Ще започнем с един цитат от научната литература:
 ```
-What is an algorithm? An algorithm is a procedure to accomplish a specific task. An algorithm is the idea behind any reasonable computer program. To be interesting, an algorithm must solve a general, well-specified problem.
+What is an algorithm? An algorithm is a procedure to accomplish a specific task. 
+An algorithm is the idea behind any reasonable computer program. 
+To be interesting, an algorithm must solve a general, well-specified problem.
 ```
 Общоприета формална дефиниция за понятието алгоритъм няма. Често обаче се среща следното описание, което и ние ще използваме в рамките на курса:
 > **Алгоритъм** наричаме *крайна* последователност от стъпки, които водят до решаването на дадена задача.
