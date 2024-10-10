@@ -59,20 +59,20 @@ void sum(vector<int>& arr)
 ```c++
 bool isPrime(int n) 
 {
-	if(n <= 1)
-	{
-		return false;
-	}
+    if(n <= 1)
+    {
+    	return false;
+    }
 
-	bool isPrime = true;
-	for (int i = 2; i <= sqrt(n); i++)
-	{
-		if (n % i == 0)
-		{
-			isPrime = false; 
-			break;
-		}
-	}
+    bool isPrime = true;
+    for (int i = 2; i <= sqrt(n); i++)
+    {
+    	if (n % i == 0)
+    	{
+    		isPrime = false; 
+    		break;
+    	}
+    }
 
     return isPrime;
 }
@@ -86,21 +86,21 @@ bool isPrime(int n)
 ```c++
 bool isPrime(int n) 
 {
-	if(n <= 1)
-	{
-		return false;
-	}
+    if(n <= 1)
+    {
+    	return false;
+    }
 
-	bool isPrime = true;
-	double sqrtFromNumberToCheck = sqrt(n);
-	for (int i = 2; i <= sqrtFromNumberToCheck; i++)
-	{
-		if (n % i == 0)
-		{
-			isPrime = false; 
-			break;
-		}
-	}
+    bool isPrime = true;
+    double sqrtFromNumberToCheck = sqrt(n);
+    for (int i = 2; i <= sqrtFromNumberToCheck; i++)
+    {
+    	if (n % i == 0)
+    	{
+    		isPrime = false; 
+    		break;
+    	}
+    }
 
     return isPrime;
 }
