@@ -1,4 +1,4 @@
-# Семинар №2 - Сложност на алгоритми - продължение. Бавни сортиращи алгоритми.
+# Семинар №2 - Сложност на алгоритми - продължение
 ## Изчисляване на сложност
 ### Сложност на итеративни алгоритми
 Итеративни алгоритми са тези, които използват в рамките на своето изпълнение така наречените конструкции за цикъл - for, while, do-while.
@@ -19,7 +19,7 @@ void sumFirstFive(vector<int>& arr)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(1)
+  Сложност по време: Theta(1)
 </details>
 <br/>
 
@@ -36,7 +36,7 @@ void sum(vector<int>& arr)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(n)
+  Сложност по време: Theta(n)
 </details>
 <br/>
 
@@ -52,7 +52,7 @@ void sum(vector<int>& arr)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(n)
+  Сложност по време: Theta(n)
 </details>
 <br/>
 
@@ -79,7 +79,9 @@ bool isPrime(int n)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(log(n) * n^(1/2))
+  Сложност по време: Theta(log(n) * n^(1/2))
+
+  (Функцията sqrt има сложност Theta(log(n)))
 </details>
 <br/>
 
@@ -107,7 +109,7 @@ bool isPrime(int n)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(n^(1/2))
+  Сложност по време: Theta(n^(1/2))
 </details>
 <br/>
 
@@ -123,7 +125,7 @@ void doStuff(vector<int>& arr)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(log(n))
+  Сложност по време: Theta(log(n))
 </details>
 <br/>
 
@@ -143,7 +145,7 @@ void doStuff(vector<int>& arr)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(n^2)
+  Сложност по време: Theta(n^2)
 </details>
 <br/>
 
@@ -162,7 +164,7 @@ void doStuff(vector<int>& arr)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(n^2)
+  Сложност по време: Theta(n*log(n))
 </details>
 <br/>
 
@@ -181,7 +183,7 @@ void doStuff(vector<int>& arr)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(n*log(n))
+  Сложност по време: Theta(n)
 </details>
 <br/>
 
@@ -207,7 +209,7 @@ int sum(int n)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(n)
+  Сложност по време: Theta(n)
 </details>
 <br/>
 
@@ -223,7 +225,7 @@ int divSum(int n)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(log(n))
+  Сложност по време: Theta(log(n))
 </details>
 <br/>
 
@@ -239,7 +241,7 @@ unsigned fibb(unsigned n)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(1.618^n)
+  Сложност по време: Theta(1.618^n)
 </details>
 <br/>
 
@@ -255,50 +257,17 @@ int tree(int n)
 ```
 <details>
   <summary>Отговор</summary>
-  Сложност по време: O(2^n)
+  Сложност по време: Theta(2^n)
 </details>
 <br/>
 
 ## Решаване на общи задачи
+[01. Encode Password](https://www.hackerrank.com/contests/practice-1-sda/challenges/encoding-password)
 
-## Бавни сортирания
-### Bubble Sort (Optimized)
-От така наречените "бавни" сортировки, Bubble sort намира може би най-малко приложение в практиката. Нека разгледаме някои от неговите показатели:
+[02. Majority Element](https://leetcode.com/problems/majority-element/description/)
 
-Сложност в най-добрият случай: **Theta(n)**
+[03. Water Volumes](https://leetcode.com/problems/container-with-most-water/description/)
 
-Сложност в среден случай: **Theta(n^2)**
+[04. Single Number](https://leetcode.com/problems/single-number/description/)
 
-Сложност в най-лошият случай: **Theta(n^2)**
-
-Стабилност: **Да**
-
-Адаптивност: Зависи (в общия случай - **Не**)
-
-### Selection Sort (Optimized)
-Макар с висока сложност дори и в най-добрият случай, оптимизираната версия на Selection sort притежава една много важна характеристика - **прави минимален брой swap-ове**. Тази негова характеристика намира широко приложение за данни, при които операцията swap е тежка. 
-
-Сложност в най-добрият случай: **Theta(n^2)**
-
-Сложност в среден случай: **Theta(n^2)**
-
-Сложност в най-лошият случай: **Theta(n^2)**
-
-Стабилност: **Не**
-
-Адаптивност: **Не**
-
-### Insertion Sort
-Въпреки че е с квадратична сложност, Insertion sort е много разпространен алгоритъм за сортиране поради свойството си "адаптивност". Сортиращ алгоритъм наричаме **адаптивен**, когато работи бързо за почти-сортирани данни. Точно поради това свое предимство, Insertion sort е част от default-ната имплементация на std::sort().
-
-Сложност в най-добрият случай: **Theta(n)**
-
-Сложност в среден случай: **Theta(n^2)**
-
-Сложност в най-лошият случай: **Theta(n^2)**
-
-Стабилност: **Да**
-
-Адаптивност: **Да**
-
-## Решаване на задачи за сортиране
+[05. First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/)

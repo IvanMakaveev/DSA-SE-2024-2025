@@ -194,6 +194,6 @@ ios_base::sync_with_stdio(false);
 cin.tie(NULL);
 ```
 
-## Задачи:
+## Решаване на задачи:
 
 [Link към задачи за семинара](https://www.hackerrank.com/contests/seminar-01)
