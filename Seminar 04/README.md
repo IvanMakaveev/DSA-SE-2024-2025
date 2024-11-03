@@ -240,7 +240,7 @@ Notes: Когато търсеният елемент е близо до нач�
 
 [04. Search Insert Position](https://leetcode.com/problems/search-insert-position/description/) - Използване на bound функции от STL
 
-[05. Coast Lifeguard](./Solutions/Coast%20Lifeguard/description.pdf)
+[05. Coast Lifeguard](./Solutions/Coast%20Lifeguard/description.pdf) - Ternary Search по отговор на нелинейна функция
 
 [06. Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/description/)
 
