@@ -1,42 +1,30 @@
-struct TreeNode
-{
-    vector<TreeNode*> children;
-    unsigned int childrenCount = 0;
-};
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
 
-unsigned int fillChildren(TreeNode* root)
-{
-    root->childrenCount = root->children.size();
-    
-    unsigned int count = root->children.size();
-    for (unsigned int i = 0; i < count; i++)
-    {
-        root->childrenCount += fillChildren(root->children[i]);
-    }
-    
-    
-    return root->childrenCount;
-}
-
-TreeNode nodes[1000000];
 
 int main() {
-    unsigned int count = 0;
-    cin >> count;
-    count--;
-    for (unsigned int i = 0; i < count; i++)
-    {
-        unsigned int parent, child;
+    size_t N;
+    cin >> N;
+    vector<pair<size_t, size_t>> parents(N, { 0,0 });
+    size_t parent, child;
+    for (size_t i = 0; i < N - 1; i++) {
         cin >> parent >> child;
-        
-        nodes[parent].children.push_back(&nodes[child]);
+        parents[child].first = parent;
     }
-    
-    fillChildren(&nodes[0]);
-    
-    count++;
-    for (unsigned int i = 0; i < count; i++)
-    {
-        cout << nodes[i].childrenCount << ' ';
+
+    for (long long i = N - 1; i >= 0; i--) {
+        size_t next = i;
+        while (next) {
+            next = parents[next].first;
+            parents[next].second++;
+        }
+    }
+
+    for (auto& node : parents) {
+        cout << node.second << ' ';
     }
 }
