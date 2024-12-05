@@ -9,12 +9,13 @@ public:
         for (int i = 0; i < n; i++) {
             if (charSet.count(s[i]) == 0) {
                 charSet.insert(s[i]);
-                maxLength = max(maxLength, charSet.size());
+                maxLength = max(maxLength, (int)charSet.size());
             } else {
-                while (s[beg] != s[i]) {
+                while (charSet.count(s[i])) {
                     charSet.erase(s[beg]);
                     beg++;
                 }
+                charSet.insert(s[i]);
             }
         }
         
